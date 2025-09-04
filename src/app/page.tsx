@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
 import Header from "./layout-components/Header"
-import Experiences from "./layout-components/Experiences"
+import { Experiences } from "./Experiences/Experiences"
 
 export default function Portfolio() {
   const skills = [
@@ -73,14 +73,14 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-2xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Header Section */}
         <Header />
-        <hr className="my-4" />
+        <hr className="my-6" />
         {/* Skills Section */}
         <Experiences />
 
-        <hr className="my-40" />
+        <hr className="my-8" />
         {/* Experience Section */}
         <section className="space-y-6">
           <h2 className="text-2xl font-semibold text-center">Experience</h2>

@@ -1,6 +1,6 @@
-import ExperienceCard from "@/components/ExperienceCard";
+import ExperienceCard from "@/app/Experiences/ExperienceCard";
 
-export default function Experiences() {
+export function Experiences() {
     return (
         <div className="space-y-4">
             <p className="text-md text-muted-foreground text-pretty leading-relaxed">
@@ -15,12 +15,16 @@ export default function Experiences() {
                     company="yahoo"
                     period="summer 2025"
                     description="developing features for the frontend of the yahoo news web app"
+                    badges={["TypeScript", "Next.js", "Tailwind CSS", "Apollo GraphQL"]}
+                    img="/yahoo.png"
                 />
                 <ExperienceCard 
                     title="software engineer intern"
                     company="us renal care"
                     period="summer 2024"
                     description="building a patient-clinician scheduling app for home dialysis clinics"
+                    badges={["TypeScript", "C#", "React", "Tailwind CSS", ".NET Core", "SQL Server"]}
+                    img="/usrc.png"
                 />
             </div>
         </div>
