@@ -74,7 +74,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-3xl mx-auto px-6 py-12">
         {/* Header Section */}
         <Header />
         <hr className="my-6" />
@@ -85,42 +85,9 @@ export default function Portfolio() {
         {/* Portfolio Section */}
         <PortfolioFeed />
 
-        {/* Projects Section */}
-        <section className="space-y-6">
-          <div className="space-y-4">
-            {projects.map((project, index) => (
-              <Card key={index} className="border-border/50 hover:border-border transition-colors">
-                <CardHeader className="pb-3">
-                  <div className="flex justify-between items-start gap-4">
-                    <CardTitle className="text-lg">{project.title}</CardTitle>
-                    <div className="flex gap-2 shrink-0">
-                      <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
-                      <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                        <Github className="w-4 h-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <p className="text-muted-foreground leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         {/* Footer */}
         <footer className="text-center pt-8 border-t border-border/50">
-          <p className="text-muted-foreground">Built with Next.js and Tailwind CSS • © 2024 Derick</p>
+          <p className="text-muted-foreground">Derick</p>
         </footer>
       </div>
     </div>
