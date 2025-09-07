@@ -2,8 +2,9 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
-import Header from "./layout-components/Header"
+import Header from "./Header/Header"
 import { Experiences } from "./Experiences/Experiences"
+import PortfolioFeed from "./Portfolio/PortfolioFeed"
 
 export default function Portfolio() {
   const skills = [
@@ -77,45 +78,15 @@ export default function Portfolio() {
         {/* Header Section */}
         <Header />
         <hr className="my-6" />
-        {/* Skills Section */}
+        {/* Experiences Section */}
         <Experiences />
 
         <hr className="my-8" />
-        {/* Experience Section */}
-        <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-center">Experience</h2>
-          <div className="space-y-4">
-            {experiences.map((exp, index) => (
-              <Card key={index} className="border-border/50 hover:border-border transition-colors">
-                <CardHeader className="pb-3">
-                  <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <CardTitle className="text-lg">{exp.title}</CardTitle>
-                      <CardDescription className="text-primary font-medium">{exp.company}</CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="shrink-0">
-                      {exp.period}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+        {/* Portfolio Section */}
+        <PortfolioFeed />
 
         {/* Projects Section */}
         <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-center">Featured Projects</h2>
           <div className="space-y-4">
             {projects.map((project, index) => (
               <Card key={index} className="border-border/50 hover:border-border transition-colors">

@@ -7,7 +7,7 @@ export function Experiences() {
                 I'm currently a student at rice university studying computer science.
             </p>
             <p className="text-md text-muted-foreground text-pretty leading-relaxed">
-                I build full-stack web apps 🧑🏻‍💻! I've previously been a:
+                I build web apps 🧑🏻‍💻! I've previously been a:
             </p>
             <div className="flex flex-col gap-4">
                 <ExperienceCard 

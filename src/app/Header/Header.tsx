@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Header() {
     return (
-        <header className="">
+        <header>
             <div className="flex justify-between items-center">
                 <h1>
                     <span className="text-primary text-4xl font-bold">derick pascual</span>
