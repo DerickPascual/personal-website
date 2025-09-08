@@ -36,7 +36,8 @@ export default function PortfolioCard(
         videos,
         organization,
         githubUrl,
-        websiteUrl
+        websiteUrl,
+        websiteInProgress
     }: {
         title: string;
         description: string;
@@ -47,6 +48,7 @@ export default function PortfolioCard(
         organization?: string;
         githubUrl?: string;
         websiteUrl?: string;
+        websiteInProgress?: boolean;
     }
 ) {
     return (
@@ -55,7 +57,7 @@ export default function PortfolioCard(
                 <div className="flex flex-col gap-2">
                     <CardTitle>{title}</CardTitle>
                     {organization && (
-                        <div className="text-muted-foreground font-semibold text-sm">
+                        <div className="text-muted-foreground text-sm">
                             <ReactMarkdown components={organizationMarkdownComponents}>
                                 {organization}
                             </ReactMarkdown>
@@ -73,10 +75,10 @@ export default function PortfolioCard(
             <CardFooter className="my-[-8px]">
                 <div className="w-full flex justify-between mt-[-8px]">
                     {githubUrl ? (
-                        <Button 
-                            variant="ghost" 
-                            size="sm" 
-                            className="text-muted-foreground hover:text-blue-500"
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-primary hover:text-blue-500"
                             asChild
                         >
                             <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
@@ -85,13 +87,16 @@ export default function PortfolioCard(
                             </a>
                         </Button>
                     ) : (
-                        <div className="h-8 w-8" /> // Placeholder to maintain layout
+                        <div className="flex items-center gap-2 p-2">
+                            <Github className="w-4 h-4" />
+                            <p className="text-xs font-bold"> private github</p>
+                        </div>
                     )}
                     {websiteUrl ? (
-                        <Button 
-                            variant="ghost" 
-                            size="sm" 
-                            className="text-muted-foreground hover:text-blue-500"
+                        <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-primary hover:text-blue-500"
                             asChild
                         >
                             <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
@@ -100,7 +105,14 @@ export default function PortfolioCard(
                             </a>
                         </Button>
                     ) : (
-                        <div className="h-8 w-8" /> // Placeholder to maintain layout
+                        websiteInProgress ? (
+                            <div className="flex items-center gap-2">
+                                <ExternalLink className="w-4 h-4" />
+                                <p className="text-xs font-bold">website in progress</p>
+                            </div>
+                        ) : (
+                            <div className="w-8 h-8" />
+                        )
                     )}
                 </div>
             </CardFooter>

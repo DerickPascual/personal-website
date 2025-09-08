@@ -84,11 +84,6 @@ export default function Portfolio() {
         <hr className="my-8" />
         {/* Portfolio Section */}
         <PortfolioFeed />
-
-        {/* Footer */}
-        <footer className="text-center pt-8 border-t border-border/50">
-          <p className="text-muted-foreground">Derick</p>
-        </footer>
       </div>
     </div>
   )

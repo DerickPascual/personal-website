@@ -29,6 +29,7 @@ export default function ExperienceCard(
             </CardHeader>
             <CardContent className="text-muted-foreground text-sm flex flex-col gap-2">
                 <p>{description}</p>
+                
                 <div className="flex flex-wrap gap-2">
                     <BadgeGroup badges={badges} />
                 </div>

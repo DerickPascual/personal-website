@@ -45,7 +45,7 @@ export default function PortfolioText({ content }: PortfolioTextProps) {
   };
 
   return (
-    <div className="text-muted-foreground text-sm">
+    <div className="text-primary text-sm">
       {isExpanded ? (
         <div className="flex flex-col gap-2">
           <ReactMarkdown components={markdownComponents}>
@@ -68,7 +68,7 @@ export default function PortfolioText({ content }: PortfolioTextProps) {
           {isTruncated && (
             <button 
               onClick={() => setIsExpanded(true)}
-              className="text-muted-foreground font-bold hover:text-blue-500 text-xs mt-1"
+              className="text-primary font-bold hover:text-blue-500 hover:pointer text-xs mt-1"
             >
               Read more
             </button>

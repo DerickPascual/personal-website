@@ -3,8 +3,8 @@ import PortfolioCard from "./PortfolioCard";
 export default function PortfolioFeed() {
     return (
         <div>
-            <p className="text-md text-muted-foreground text-pretty leading-relaxed mb-4">
-                I work full-stack with a frontend focus. Here are some of the projects I've worked on:
+            <p className="text-sm text-primary font-medium text-pretty leading-relaxed mb-4">
+                I develop full-stack with a focus on frontend. Here's some of my work:
             </p>
             <div className="flex flex-col gap-4">
                 <PortfolioCard 
@@ -14,6 +14,7 @@ export default function PortfolioFeed() {
                     period="2024 - present"
                     organization="[ylab @ rice university](https://ylab.rice.edu)"
                     videos={["/videos/compressed-andes-fast.mp4"]}
+                    websiteInProgress={true}
                 />
                 <PortfolioCard 
                     title="rice menus"
@@ -22,6 +23,7 @@ export default function PortfolioFeed() {
                     period="2023"
                     organization="personal project"
                     images={["/rice-menus-images/rice-menus-landing-hq.webp", "/rice-menus-images/rice-menus-settings-hq.webp"]}
+                    githubUrl="https://github.com/DerickPascual/riceMenus"
                 />
                 <PortfolioCard 
                     title="diner"
@@ -29,6 +31,7 @@ export default function PortfolioFeed() {
                     technologies={["React", "JavaScript", "Express.js", "Google Places API"]}
                     period="2023"
                     organization="personal project"
+                    videos={["/videos/compressed-letsdiner.mp4"]}
                 />
                 <PortfolioCard 
                     title="pomodoros.me"
