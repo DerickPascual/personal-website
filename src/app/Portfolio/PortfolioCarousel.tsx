@@ -78,8 +78,14 @@ export default function PortfolioCarousel({ images = [], videos = [] }: Portfoli
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-2" />
-        <CarouselNext className="right-2" />
+        
+        {/* Navigation buttons below the carousel content - only show if more than 1 item */}
+        {itemsToShow.length > 1 && (
+          <div className="flex justify-between gap-2 mt-4">
+            <CarouselPrevious className="relative left-auto right-auto top-auto translate-x-0 translate-y-0" />
+            <CarouselNext className="relative left-auto right-auto top-auto translate-x-0 translate-y-0" />
+          </div>
+        )}
       </Carousel>
     </div>
   );

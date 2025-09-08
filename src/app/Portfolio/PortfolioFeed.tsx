@@ -13,6 +13,7 @@ export default function PortfolioFeed() {
                     technologies={["Next.js", "Tailwind CSS", "Django", "Redis", "Celery"]}
                     period="2024 - present"
                     organization="[ylab @ rice university](https://ylab.rice.edu)"
+                    videos={["/videos/compressed-andes-fast.mp4"]}
                 />
                 <PortfolioCard 
                     title="rice menus"
@@ -20,6 +21,7 @@ export default function PortfolioFeed() {
                     technologies={["React", "JavaScript", "Express.js", "PostgreSQL", "Twilio API"]}
                     period="2023"
                     organization="personal project"
+                    images={["/rice-menus-images/rice-menus-landing-hq.webp", "/rice-menus-images/rice-menus-settings-hq.webp"]}
                 />
                 <PortfolioCard 
                     title="diner"
@@ -30,10 +32,13 @@ export default function PortfolioFeed() {
                 />
                 <PortfolioCard 
                     title="pomodoros.me"
-                    description="I developed a pixel-aesthetic pomodoro timer web app inspired by [countdowns.live](https://countdowns.live) and [buildspace.so](https://buildspace.so)."
+                    description="I developed a pixel-themed pomodoro timer web app inspired by [countdowns.live](https://countdowns.live) and [buildspace.so](https://buildspace.so)."
                     technologies={["React", "JavaScript", "Firebase"]}
                     period="2023"
                     organization="personal project"
+                    videos={["/videos/compressed-pomodoro.mp4"]}
+                    websiteUrl="https://pomodoros.me"
+                    githubUrl="https://github.com/DerickPascual/pomodoros"
                 />
             </div>
         </div>

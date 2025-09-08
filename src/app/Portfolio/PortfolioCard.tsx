@@ -34,7 +34,9 @@ export default function PortfolioCard(
         period,
         images,
         videos,
-        organization
+        organization,
+        githubUrl,
+        websiteUrl
     }: {
         title: string;
         description: string;
@@ -43,6 +45,8 @@ export default function PortfolioCard(
         images?: string[];
         videos?: string[];
         organization?: string;
+        githubUrl?: string;
+        websiteUrl?: string;
     }
 ) {
     return (
@@ -68,12 +72,36 @@ export default function PortfolioCard(
             <hr className="mx-2" />
             <CardFooter className="my-[-8px]">
                 <div className="w-full flex justify-between mt-[-8px]">
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-muted-foreground hover:text-blue-500">
-                        <ExternalLink className="w-4 h-4" />
-                    </Button>
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-muted-foreground hover:text-blue-500">
-                        <Github className="w-4 h-4" />
-                    </Button>
+                    {githubUrl ? (
+                        <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="text-muted-foreground hover:text-blue-500"
+                            asChild
+                        >
+                            <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                                <Github className="w-4 h-4" />
+                                <p className="text-xs font-bold">github</p>
+                            </a>
+                        </Button>
+                    ) : (
+                        <div className="h-8 w-8" /> // Placeholder to maintain layout
+                    )}
+                    {websiteUrl ? (
+                        <Button 
+                            variant="ghost" 
+                            size="sm" 
+                            className="text-muted-foreground hover:text-blue-500"
+                            asChild
+                        >
+                            <a href={websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                                <ExternalLink className="w-4 h-4" />
+                                <p className="text-xs font-bold">go to website</p>
+                            </a>
+                        </Button>
+                    ) : (
+                        <div className="h-8 w-8" /> // Placeholder to maintain layout
+                    )}
                 </div>
             </CardFooter>
         </Card>

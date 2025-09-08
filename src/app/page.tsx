@@ -74,7 +74,7 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-3xl mx-auto px-6 py-12">
+      <div className="max-w-2xl mx-auto px-6 py-12">
         {/* Header Section */}
         <Header />
         <hr className="my-6" />
