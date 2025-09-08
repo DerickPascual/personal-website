@@ -8,10 +8,22 @@ export default function Header() {
                 <h1>
                     <span className="text-primary text-4xl font-bold">derick pascual</span>
                 </h1>
-                <div className="flex gap-8">
-                    <Github className="w-4 h-4" />
-                    <Linkedin className="w-4 h-4" />
-                    <Mail className="w-4 h-4" />
+                <div className="flex gap-2">
+                    <Button variant="ghost" size="icon" asChild>
+                        <a href="https://github.com/derickpascual" target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 text-blue-500" />
+                        </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                        <a href="https://www.linkedin.com/in/derick-pascual/" target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="w-4 h-4 text-blue-500" />
+                        </a>
+                    </Button>
+                    <Button variant="ghost" size="icon" asChild>
+                        <a>
+                        <Mail className="w-4 h-4 text-blue-500" />
+                        </a>
+                    </Button>
                 </div>
             </div>
         </header>
