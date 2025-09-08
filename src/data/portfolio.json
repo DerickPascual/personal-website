@@ -1,0 +1,42 @@
+[
+  {
+    "id": "andes",
+    "title": "andes web app",
+    "description": "I'm currently working with [ylab](https://ylab.rice.edu), a Rice University computational biology lab, to build a web app allowing researchers to run gene set comparisons on the web. I built this app with Next.js for the frontend, and Django for the backend. It uses Redis/Celery for the job scheduling.",
+    "technologies": ["Next.js", "Tailwind CSS", "Django", "Redis", "Celery"],
+    "period": "2024 - present",
+    "organization": "[ylab @ rice university](https://ylab.rice.edu)",
+    "videos": ["/videos/compressed-andes-fast.mp4"],
+    "websiteInProgress": true
+  },
+  {
+    "id": "rice-menus",
+    "title": "rice menus",
+    "description": "A web app that scrapes Rice University servery (dining hall) menus and texts them to users using [Twilio API](https://www.twilio.com).",
+    "technologies": ["React", "JavaScript", "Express.js", "PostgreSQL", "Twilio API"],
+    "period": "2023",
+    "organization": "personal project",
+    "images": ["/rice-menus-images/rice-menus-landing-hq.webp", "/rice-menus-images/rice-menus-settings-hq.webp"],
+    "githubUrl": "https://github.com/DerickPascual/riceMenus"
+  },
+  {
+    "id": "diner",
+    "title": "diner",
+    "description": "A Tinder-for restaurants style web app that allows users and friends to swipe through restaurants in real-time.",
+    "technologies": ["React", "JavaScript", "Express.js", "Google Places API"],
+    "period": "2023",
+    "organization": "personal project",
+    "videos": ["/videos/compressed-letsdiner.mp4"]
+  },
+  {
+    "id": "pomodoros",
+    "title": "pomodoros.me",
+    "description": "I developed a pixel-themed pomodoro timer web app inspired by [countdowns.live](https://countdowns.live) and [buildspace.so](https://buildspace.so).",
+    "technologies": ["React", "JavaScript", "Firebase"],
+    "period": "2023",
+    "organization": "personal project",
+    "videos": ["/videos/compressed-pomodoro.mp4"],
+    "websiteUrl": "https://pomodoros.me",
+    "githubUrl": "https://github.com/DerickPascual/pomodoros"
+  }
+]
