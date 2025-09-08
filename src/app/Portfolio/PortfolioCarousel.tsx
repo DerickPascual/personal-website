@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import AutoPlayVideo from "./AutoPlayVideo";
 
 interface PortfolioCarouselProps {
   images?: string[];
@@ -65,13 +66,10 @@ export default function PortfolioCarousel({ images = [], videos = [] }: Portfoli
                       className="w-full h-full object-cover rounded-lg"
                     />
                   ) : (
-                    <video
-                      controls
-                      className="w-full h-full rounded-lg"
-                    >
-                      <source src={item.src} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
+                    <AutoPlayVideo
+                      src={item.src}
+                      className="w-full h-full object-cover"
+                    />
                   )
                 )}
               </div>
