@@ -8,7 +8,7 @@ export default function PortfolioFeed() {
     return (
         <div>
             <p className="text-sm text-primary font-medium text-pretty leading-relaxed mb-4">
-                I develop full-stack with a focus on frontend. Here's some of my work:
+                I develop full-stack with a focus on frontend. Here&apos;s some of my work:
             </p>
             <div className="flex flex-col gap-4">
                 {projects.map((project) => (

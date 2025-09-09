@@ -34,7 +34,7 @@ export default function PortfolioCarousel({ images = [], videos = [] }: Portfoli
           {itemsToShow.map((item, index) => (
             <CarouselItem key={index}>
               <div className="flex aspect-video items-center justify-center rounded-lg border bg-muted">
-                {(item as any).placeholder ? (
+                {'placeholder' in item && item.placeholder ? (
                   // Placeholder content
                   <div className="flex flex-col items-center justify-center text-muted-foreground">
                     {item.type === 'image' ? (

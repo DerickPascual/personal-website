@@ -9,7 +9,7 @@ import ReactMarkdown from "react-markdown";
 
 // Markdown components for organization (more subtle styling)
 const organizationMarkdownComponents = {
-    a: ({ href, children, ...props }: any) => (
+    a: ({ href, children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href?: string; children?: React.ReactNode }) => (
         <a
             href={href}
             className="text-blue-500 font-semibold hover:text-blue-500/80 transition-colors"
@@ -20,10 +20,10 @@ const organizationMarkdownComponents = {
             {children}
         </a>
     ),
-    p: ({ children }: any) => <span>{children}</span>,
-    strong: ({ children }: any) => <strong className="font-medium">{children}</strong>,
-    em: ({ children }: any) => <em className="italic">{children}</em>,
-    code: ({ children }: any) => <code className="bg-muted px-1 rounded text-xs">{children}</code>
+    p: ({ children }: { children?: React.ReactNode }) => <span>{children}</span>,
+    strong: ({ children }: { children?: React.ReactNode }) => <strong className="font-medium">{children}</strong>,
+    em: ({ children }: { children?: React.ReactNode }) => <em className="italic">{children}</em>,
+    code: ({ children }: { children?: React.ReactNode }) => <code className="bg-muted px-1 rounded text-xs">{children}</code>
 };
 
 export default function PortfolioCard(

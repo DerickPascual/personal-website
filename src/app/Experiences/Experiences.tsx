@@ -4,10 +4,10 @@ export function Experiences() {
     return (
         <div className="space-y-4">
             <p className="text-sm font-medium text-pretty leading-relaxed">
-                I'm currently a student at rice university studying computer science.
+                I&apos;m currently a student at rice university studying computer science.
             </p>
             <p className="text-sm font-medium text-pretty leading-relaxed">
-                I build web apps 🧑🏻‍💻! I've previously been a:
+                I build web apps 🧑🏻‍💻! I&apos;ve previously been a:
             </p>
             <div className="flex flex-col gap-4">
                 <ExperienceCard 

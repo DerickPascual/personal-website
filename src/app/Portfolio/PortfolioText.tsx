@@ -27,7 +27,7 @@ export default function PortfolioText({ content }: PortfolioTextProps) {
   }, [content, isExpanded]);
 
   const markdownComponents = {
-    a: ({ href, children, ...props }: any) => (
+    a: ({ href, children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement> & { href?: string; children?: React.ReactNode }) => (
       <a 
         href={href} 
         className={"text-blue-500 font-semibold hover:text-blue-600"}
@@ -38,10 +38,10 @@ export default function PortfolioText({ content }: PortfolioTextProps) {
         {children}
       </a>
     ),
-    p: ({ children }: any) => <p className="mb-3">{children}</p>,
-    strong: ({ children }: any) => <strong className="font-semibold">{children}</strong>,
-    em: ({ children }: any) => <em className="italic">{children}</em>,
-    code: ({ children }: any) => <code className="bg-muted px-1 rounded text-xs">{children}</code>
+    p: ({ children }: { children?: React.ReactNode }) => <p className="mb-3">{children}</p>,
+    strong: ({ children }: { children?: React.ReactNode }) => <strong className="font-semibold">{children}</strong>,
+    em: ({ children }: { children?: React.ReactNode }) => <em className="italic">{children}</em>,
+    code: ({ children }: { children?: React.ReactNode }) => <code className="bg-muted px-1 rounded text-xs">{children}</code>
   };
 
   return (
