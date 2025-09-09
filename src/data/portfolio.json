@@ -2,7 +2,7 @@
   {
     "id": "andes",
     "title": "andes web app",
-    "description": "I'm currently working with [ylab](https://ylab.rice.edu), a Rice University computational biology lab, to build a web app allowing researchers to run gene set comparisons on the web. I built this app with Next.js for the frontend, and Django for the backend. It uses Redis/Celery for the job scheduling.",
+    "description": "I'm currently working with [ylab](https://ylab.rice.edu), a Rice University computational biology lab, to build a web app allowing researchers to run gene set comparisons on the web.\n\n**ANDES** is a gene set comparison methodology that uses gene embeddings to calculate a similarity score between two gene sets. This has important applications in drug development and disease research.\n\nThe goal of this app is to provide researchers a way to conveniently upload gene sets, run the ANDES tool, and visualize the results.\n\nI used [v0](http://v0.dev) to prototype and get inspiration for the frontend, and I'm currently building it with **Next.js**.\n\nOn the backend side, I'm using **Django** to handle REST functionality, and **Celery/Redis** in order to run asynchronous ANDES computation tasks.",
     "technologies": ["Next.js", "Tailwind CSS", "Django", "Redis", "Celery"],
     "period": "2024 - present",
     "organization": "[ylab @ rice university](https://ylab.rice.edu)",
@@ -12,7 +12,7 @@
   {
     "id": "rice-menus",
     "title": "rice menus",
-    "description": "A web app that scrapes Rice University servery (dining hall) menus and texts them to users using [Twilio API](https://www.twilio.com).",
+    "description": "I created a web app that scrapes Rice University servery (dining hall) menus and texts them to users using [Twilio API](https://www.twilio.com).\n\nFor Rice students, part of daily life is checking servery menus to get an idea of where to eat for lunch and dinner. This can take a few minutes, and it's a bit inconvenient to go to the servery websites. I decided to make an app that makes solves this inconvenience.\n\nUsing **Express.js** and **Puppeteer**, I scraped the Rice menu websites every morning, stored them in a **PostgreSQL** database, and texted them to users before lunch and dinner using **Twilio API**.\n\nThis was one of my favorite projects! At one point I had over a hundred students receiving menu texts. Unfortunately, the Twilio costs got too high, and since I didn't want to monetize, I decided to shut down the app 🥲.",
     "technologies": ["React", "JavaScript", "Express.js", "PostgreSQL", "Twilio API"],
     "period": "2023",
     "organization": "personal project",
@@ -22,7 +22,7 @@
   {
     "id": "diner",
     "title": "diner",
-    "description": "A Tinder-for restaurants style web app that allows users and friends to swipe through restaurants in real-time.",
+    "description": "My friend had an idea for a \"Tinder for restaurants\" app that would let you swipe on restaurants to decide where to eat. I decided to build it as a learning experience!\n\nI used **React** for the frontend, and **Express.js** for the backend.\n\nOn the frontend, I used **react-tinder-card** for the card-swiping functionality. This was my first time using external component libraries, so there was definitely a learning curve. I had to make lots of optimizations to ensure the smoothness of the swiping animation (virtualization, lazy loading, image resolutions).\n\nHow the backend worked: I fetched local restaurant data using **Google Places API** and used [socket.io](https://socket.io) to create \"rooms\" where multiple users could swipe on the same restaurants in real-time. When a match was found, users would be alerted.\n\nI thought about trying to attract a user-base for this app, but I think the **Google Places API** costs would've been too high. On top of that, the goal of this app was primarily to familiarize myself with **React**, **Express**, and web sockets, which I definitely got to do.",
     "technologies": ["React", "JavaScript", "Express.js", "Google Places API"],
     "period": "2023",
     "organization": "personal project",
@@ -31,7 +31,7 @@
   {
     "id": "pomodoros",
     "title": "pomodoros.me",
-    "description": "I developed a pixel-themed pomodoro timer web app inspired by [countdowns.live](https://countdowns.live) and [buildspace.so](https://buildspace.so).",
+    "description": "I saw a couple sites on reddit with very distinct aesthetics: [countdowns.live](https://countdowns.live) and [buildspace.so](https://buildspace.so). I wanted to try to make a pomodoro timer with a similar aesthetic.\n\nThis was my first time using **React** to build a user interface. This project was my first introduction to concepts like state, components, and hooks.\n\nFor simplicity, I used **Firebase** for user-related functionality, like auth and storing user data related to time spent working.\n\nI'm a pretty visual person, so this project was very enjoyable to build!",
     "technologies": ["React", "JavaScript", "Firebase"],
     "period": "2023",
     "organization": "personal project",

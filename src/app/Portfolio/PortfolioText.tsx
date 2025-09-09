@@ -38,7 +38,7 @@ export default function PortfolioText({ content }: PortfolioTextProps) {
         {children}
       </a>
     ),
-    p: ({ children }: any) => <span>{children}</span>,
+    p: ({ children }: any) => <p className="mb-3">{children}</p>,
     strong: ({ children }: any) => <strong className="font-semibold">{children}</strong>,
     em: ({ children }: any) => <em className="italic">{children}</em>,
     code: ({ children }: any) => <code className="bg-muted px-1 rounded text-xs">{children}</code>
